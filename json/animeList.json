@@ -1,0 +1,24 @@
+var animeList =
+{
+    "anime": [
+        {
+            "title": "Naruto",
+            "episodes": 220,
+            "rating": 8.5
+        },
+        {
+            "title": "Bleach",
+            "episodes": 366,
+            "rating": 8.5
+        },
+        {
+            "title": "One Piece",
+            "episodes": 900,
+            "rating": 8.5
+        },
+        {
+            "title": "Chainsaw Man", 
+            "genre", "author", "epnumber","hebergeur"
+        }
+    ]
+};
