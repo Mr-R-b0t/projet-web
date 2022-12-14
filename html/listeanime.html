@@ -3,12 +3,65 @@
     <head>
         <meta charset="utf-8">
         <title>Liste Animes</title>
+        <link rel="stylesheet" href="../css/monstyle.css">
     </head>
     <header>
         <!--TODO: ajouter le logo-->
     </header>
     <body>
         <!--insérer ici la liste des différents animes suivit avec un formulaire pour ajouter un nouvel anime-->
+        <div class="liste">
+            <table class="affiListe">
+                <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Genre</th>
+                        <th>Auteur</th>
+                        <th>Nombre d'épisode</th>
+                        <th>Où le voir</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h3>Ajoute ton anime</h3>
+        </div>
+        <div>
+            <form method = "post" name="newAnime" class="box" id="newAnime" onsubmit="return false">
+                <strong>Titre</strong>
+                <input type="text" id="title" name="title" size="25" placeholder = "Nouvel Anime" required>
+                <strong>Genre : </strong>
+                <select name="genre" size=1>
+                    <option>Action</option>
+                    <option>Amour</option>
+                    <option>Aventure</option>
+                    <option>Comédie</option>
+                    <option>Course</option>
+                    <option>Drame</option>
+                    <option>Isekai</option>
+                    <option>Mecha</option>
+                    <option>Seinen</option>
+                    <option>Shojo</option>
+                    <option>Shonen</option>
+                    <option>Slice of Life</option>
+                    <option>Sport</option>
+                </select>
+                <strong>Auteur</strong>
+                <input type="text" id="author" name="author" size="25" placeholder = "Auteur" required>
+                <strong>Nombre d'épisode</strong>
+                <input type="number" id="nbEp" name="nbEp" min="1" max="10000" required>
+                <strong>Où le voir</strong>
+                <input type="text" id="hebergeur" name="hebergeur" size="25" placeholder = "Où le voir" required>
+
+                <button type="submit" class="btn" onclick="ajouterAnime()">Ajouter</button>
+                <button type="button" class="btn"  onclick="supprimerAnime()">Supprimer</button>
+
+
+            </form>
+        </div>
     </body>
     <footer>
         <a href="accueil.html">Retour vers la page d'accueil</a>
