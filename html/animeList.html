@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Liste Animes</title>
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/.css">
         <script src="../js/code.js"></script>
     </head>
     <header>
@@ -12,11 +12,11 @@
     <body>
         <!--insérer ici la liste des différents animes suivit avec un formulaire pour ajouter un nouvel anime-->
         <div class="liste">
-            <table class="affiListe">
+            <table class="afficherList">
                 <thead>
                     <tr>
                         <th>Titre</th>
-                        <th>Genre</th>
+                    <!--<th>Genre</th> -->
                         <th>Auteur</th>
                         <th>Nombre d'épisode</th>
                         <th>Où le voir</th>
@@ -35,7 +35,7 @@
                 <strong>Titre</strong>
                 <input type="text" id="title" name="title" size="25" placeholder = "Nouvel Anime" required>
                 <strong>Genre : </strong>
-                <select name="genre" size=1>
+                <select name="genre" id="genre" size=1>
                     <option>Action</option>
                     <option>Amour</option>
                     <option>Aventure</option>
@@ -53,11 +53,10 @@
                 <strong>Auteur</strong>
                 <input type="text" id="author" name="author" size="25" placeholder = "Auteur" required>
                 <strong>Nombre d'épisode</strong>
-                <input type="number" id="nbEp" name="nbEp" min="1" max="10000" required>
+                <input type="number" id="epnumber" name="nbEp" min="1" max="10000" required>
                 <strong>Où le voir</strong>
                 <input type="text" id="hebergeur" name="hebergeur" size="25" placeholder = "Où le voir" required>
-
-                <button type="submit" class="btn" onclick="ajouterAnime()">Ajouter</button>
+                <button type="submit" class="btn" onclick="addAnime()">Ajouter</button>
                 <button type="button" class="btn"  onclick="supprimerAnime()">Supprimer</button>
 
 

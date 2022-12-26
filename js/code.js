@@ -10,24 +10,50 @@ class Anime
     }
 }
 
-function ajouterAnime()
+//ajouter des animées a un tableau depuis un form
+function addAnime()
 {
-    var newAnime = animeSaisie();
-    pushTache(newAnime);
+    var title = document.getElementById("title").value;
+/*  var genre = document.getElementById("genre").options[document.getElementById("genre").selectedIndex].value;*/ 
+    var author = document.getElementById("author").value;
+    var epnumber = document.getElementById("epnumber").value;
+    var hebergeur = document.getElementById("hebergeur").value;
+
     var newLine = document.createElement("tr");
-    var nameTask = document.createElement("td");
-    var dateTask = document.createElement("td");
-    var catTask = document.createElement("td");
-    nameTask.textContent = newTask.nom;
-    dateTask.textContent = newTask.date;
-    catTask.textContent = newTask.categorie;
-    newLine.append(nameTask, dateTask, catTask);
-    var table = document.querySelector("liste");
-    if (nameTask.textContent != "" && dateTask.textContent != "" && catTask.textContent != "")
-    {
+    var titleAnime = document.createElement("td");
+    /* var genreAnime = document.createElement("td"); */
+    var authorAnime = document.createElement("td");
+    var epnumberAnime = document.createElement("td");
+    var hebergeurAnime = document.createElement("td");
+    titleAnime.textContent = title;
+    /* genreAnime.textContent = genre; */
+    authorAnime.textContent = author;
+    epnumberAnime.textContent = epnumber;
+    hebergeurAnime.textContent = hebergeur;
+    newLine.append(titleAnime, /* genreAnime, */ authorAnime, epnumberAnime, hebergeurAnime);
+    var table = document.querySelector(".afficherList tbody");
+    if (
+        titleAnime.textContent != "" &&
+/*         genreAnime.textContent != "" &&*/        
+        authorAnime.textContent != "" &&
+        epnumberAnime.textContent != "" &&
+        hebergeurAnime.textContent != ""
+    ) {
         table.appendChild(newLine);
     }
+    var anime = new Anime(title, author, epnumber, hebergeur);
+    console.log(anime);
+    var animeList = JSON.parse(localStorage.getItem("animeList"));
+    if (animeList == null)
+    {
+        animeList = [];
+    }   
+    animeList.push(anime);
+    localStorage.setItem("animeList", JSON.stringify(animeList));
+    console.log(animeList);
+
 }
+
 
 
 function getAnimeByAPI()
