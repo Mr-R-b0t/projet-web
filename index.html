@@ -4,25 +4,49 @@
 <head>
     <meta charset="utf-8">
     <title>Accueil</title>
-    <link rel="stylesheet" href="..\css\monstyle.css">
+    <link rel="stylesheet" href="..\css\index.css">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=greek">
 
 </head>
 <header>
-    <h1>Ma liste d'Anime</h1>
-    <!--TODO: ajouter le logo-->
-    <section class="listeAnime">
-        <a href="./html/animeList.html"><button type="button" name="listeAnime">Liste Animes</button></a>
-    </section>
-    <section class="statistiques">
-        <a href="./html/stats.html"><button type="button" name="statistique">Statistiques</button></a>
-    </section>
-
-    <!--Remplacer les buttons par des img??-->
+   
 </header>
 
 <body>
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script>
 
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        const geometry = new THREE.BoxGeometry(1, 1, 1);
+        const material = new THREE.MeshBasicMaterial({
+            color: 0x00ff00
+        });
+
+        //nice animation
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+
+        //animation neon
+        
+
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+    
 </body>
 <footer>
     <a href="./html/about.html">A propos du site</a>

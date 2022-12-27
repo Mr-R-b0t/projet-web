@@ -14,17 +14,17 @@ body{
     overflow:hidden; 
 }
 
-ul{
+.menu ul{
     position:relative;
     display:flex;
     flex-direction: column;
 }
 
-ul li{
+.menu ul li{
     list-style: none;
 }
 
-ul li:before{
+.menu ul li:before{
     content: attr(data-text);
     position: absolute;
     top: 50%;
@@ -40,12 +40,12 @@ ul li:before{
     white-space: nowrap;
 }
 
-ul li:hover:before{
+.menu ul li:hover:before{
     opacity: 0.10;
     letter-spacing: 0px;
 }
 
-ul li a{
+.menu ul li a{
     position: relative;
     display: inline-block; 
     padding: 6px 15px;
@@ -59,18 +59,18 @@ ul li a{
     z-index: 1;
 }
 
-ul:hover li a {
+.menu ul:hover li a {
     opacity:0;
 }
 
-ul li a:hover{
+.menu ul li a:hover{
     transform: scale(1.4);
     z-index:1000;
     background: #ff3f81;
     opacity: 1;
 }
 
-ul li a:before{
+.menu ul li a:before{
     content: '';
     position: absolute;
     top: 0;
@@ -82,29 +82,30 @@ ul li a:before{
     transition: 0s;
 }
 
-ul li a:hover:before{
+.menu ul li a:hover:before{
     left: calc(100% + 100px);
     transition: 0.5s;
 }
+.menu-container{
+    width: 100%;
+    margin:0 auto; 
+    padding-left: 128px;
+    padding-right: 128px;
 
-.hamburger {
-    position: relative;
-    display: block;
-    width: 40px;
-    cursor: pointer;
-
-    appearance: none ;
-    background: none;
-    border: none;
-    outline: none;
+    @media (max-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+    @media (max-width: 768px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
 }
 
-.hamburger .bar .hamburger:after, .hamburger:before{
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    transition: 0.3s;
+.menu-hidden{
+    opacity:0; 
+}
+
+.menu-visible{
+    opacity:1; 
 }

@@ -6,25 +6,45 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <script defer src="../js/animation.js"></script>
   </head>
-  <header>
-    <!--TODO: ajouter le logo-->
-  </header>
+ <header class="header-home">
+        <h1>My Anime List</h1>
+        <div class="container">
+        <div class="menu-btn">
+            <div class="menu-btn__burger">
+            </div>
+        </div>
+        </div>
+        <div id="progressbar"></div>
+        <div id="scrollpath"></div>
+        
+    </header>
 
   <body>
+  <div class="menu-container" id="menu">
+        <div class="menu">
+    <ul >
+        <li data-text="Home"><a  href="index.html">Home</a></li>
+        <li data-text="My Anime List"><a  href="html/animeList.html">My Anime List</a></li>
+        <li data-text="Statistiques"><a  href="html/stats.html">Statistiques</a></li>
+        <li data-text="About"><a  href="html/about.html">About</a></li>
+        <li data-text="Contact"><a  href="html/contact.html">Contact</a></li>
+    </ul>
+    </div>
+    </div>
+    <div class="body-about" id="body-about">
     <div id="progressbar"></div>
     <div id="scrollpath"></div>
-    <h1 class="title">About</h1>
     <section class="section-hidden hidden">
       <p>Ceci est un un site afin de pouvoir recenser tout les animes que vous avez
       vu ou que vous voulez voir.</p>
     
     </section>
     <section class="section-hidden hidden">
-      <div class="header">
+      <div class="header-about">
         <h2>Les créateurs du site</h2>
         <p>Le site a été créé par 3 étudiants de l'EFREI en 2022-2023</p>
       </div>
-      <div class="container">
+      <div class="box-container">
       <div class="box">
         <div class="imgbox">
           <img src="../img/img.jpg" alt="Alexandre" />
@@ -60,9 +80,11 @@
       </div>
     </div>
     </section>
+    </div>
   </body>
-  <footer>
-    <a href="home.html">Retour vers la page d'accueil</a>
-    <!--rajouter une image?/mettre le lien avec une image?-->
-  </footer>
+  <footer id="footer" class="footer-section visible-section">
+        <section class="visible">
+            <p>&#169; Lorem Ipsum</p>
+        </section>
+    </footer>
 </html>
