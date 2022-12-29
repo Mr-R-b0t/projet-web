@@ -1,24 +1,28 @@
-var animeList =
 {
-    "anime": [
+    "animeList": [
         {
-            "title": "Naruto",
-            "episodes": 220,
-            "rating": 8.5
+        "title": "Super hero squad",
+        "author": "Metro City",
+        "genre": 2016,
+        "epnumber": "Super tower",
+        "herberger": true,
+        "status":false
         },
         {
-            "title": "Bleach",
-            "episodes": 366,
-            "rating": 8.5
+        "title": "Super hero squad",
+        "author": "Metro City",
+        "genre": 2016,
+        "epnumber": "Super tower",
+        "herberger": true,
+        "status":false
         },
         {
-            "title": "One Piece",
-            "episodes": 900,
-            "rating": 8.5
-        },
-        {
-            "title": "Chainsaw Man", 
-            "genre", "author", "epnumber","hebergeur"
+        "title": "Super hero squad",
+        "author": "Metro City",
+        "genre": 2016,
+        "epnumber": "Super tower",
+        "herberger": true,
+        "status":false
         }
     ]
-};
+}

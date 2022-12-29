@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Liste Animes</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../js/code.js"></script>
+        <script defer src="../js/animation.js"></script>
+    </head>
+   
+    <body>
+         <header class="header-anime">
+        <h1>My Anime List</h1>
+        <div class="container">
+        <div class="menu-btn">
+            <div class="menu-btn__burger">
+            </div>
+        </div>
+        </div>
+    </header>
+    <div class="menu-container" id="menu">
+        <div class="menu">
+    <ul >
+        <li data-text="Home"><a  href="../index.html">Home</a></li>
+        <li data-text="My Anime List"><a  href="./animeList.html">My Anime List</a></li>
+        <li data-text="Statistiques"><a  href="./stats.html">Statistiques</a></li>
+        <li data-text="About"><a  href="./about.html">About</a></li>
+    </ul>
+    </div>
+    </div>
+                <div class="table-section hidden" id="table">
+                <table id="animelist">
+
+                <thead>
+                    <tr>
+                        <th>Titre</th>
+                    <!--<th>Genre</th> -->
+                        <th>Auteur</th>
+                        <th>Nombre d'épisode</th>
+                        <th>Platforme</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>One Piece</td>
+                        <td>Eiichiro Oda</td>
+                        <td>1000</td>
+                        <td>Netflix</td>
+                        <td><button type="button" class="btn" onclick="deleteAnime(this)">Supprimer</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dragon Ball</td>
+                        <td>Akira Toriyama</td>
+                        <td>500</td>
+                        <td>Netflix</td>
+                        <td><button type="button" class="btn" onclick="deleteAnime(this)">Supprimer</button></td>
+                    </tr>
+                    <tr>
+                        <td>Death Note</td>
+                        <td>Takeshi Obata</td>
+                        <td>37</td>
+                        <td>Netflix</td>
+                        <td><button type="button" class="btn" onclick="deleteAnime(this)">Supprimer</button></td>
+                    </tr>
+                    <tr>
+                        <td>Fullmetal Alchemist</td>
+                        <td>Hiroshi Arakawa</td>
+                        <td>64</td>
+                        <td>Netflix</td>
+                        <td><button type="button" class="btn" onclick="deleteAnime(this)">Supprimer</button></td>
+                    </tr>
+                    <tr>
+
+                </tbody>
+            </table>
+        </div>
+       
+        <div class="form-div hidden" id="form-div">
+             <h3>Ajoute ton anime</h3>
+            <form method = "post" name="newAnime" class="form" id="newAnime" onsubmit="return false">
+                <strong>Titre</strong>
+                <input type="text" id="title" name="title" size="25" placeholder = "Nouvel Anime" required>
+                <strong>Genre : </strong>
+                <select name="genre" id="genre" size=1>
+                    <option>Action</option>
+                    <option>Amour</option>
+                    <option>Aventure</option>
+                    <option>Comédie</option>
+                    <option>Course</option>
+                    <option>Drame</option>
+                    <option>Isekai</option>
+                    <option>Mecha</option>
+                    <option>Seinen</option>
+                    <option>Shojo</option>
+                    <option>Shonen</option>
+                    <option>Slice of Life</option>
+                    <option>Sport</option>
+                </select>
+                <strong>Auteur</strong>
+                <input type="text" id="author" name="author" size="25" placeholder = "Auteur" required>
+                <strong>Nombre d'épisode</strong>
+                <input type="number" id="epnumber" name="nbEp" min="1" max="10000" required>
+                <strong>Où le voir</strong>
+                <input type="text" id="hebergeur" name="hebergeur" size="25" placeholder = "Où le voir" required>
+                <button type="submit" class="btn" onclick="addAnime()">Ajouter</button>
+
+
+            </form>
+        </div>
+    </body>
+    <div class="footer-div">
+    <footer class="footer-section">
+        <button><a href="home.html">Retour vers la page d'accueil</a></button>
+        <button><a href="about.html">A propos du site</a></button>
+    </footer>
+    </div>
+</html>
