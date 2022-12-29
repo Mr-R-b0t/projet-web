@@ -618,7 +618,7 @@ ul li a:hover:before {
 .table-section{
     height: 100%;
     overflow: auto;
-    padding-top: 0%;
+    padding-top: 5%;
 }
 
 .table-section h3{
@@ -655,4 +655,60 @@ td img{
     height:60px;
     width:60px;
     object-fit: center;
+}
+
+
+.form-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.form-div h3{
+    text-align: center;
+    color: #24292d;
+    font-size: 2em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.footer-div{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    bottom:0%;
+    width: 100%;
+    padding-bottom: 0%;
+    background-color: #2f363e;
+}
+
+.footer-div a{
+    color: #24292d;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.footer-div a:hover{
+    color: #ff3f81;
+}
+
+.footer-div a:active{
+    color: #ff3f81;
+}
+
+.footer-div button{
+    color: #24292d;
+    text-decoration: none;
+    font-size: 0.5em;
+    padding: 10px;
+    background-color: #2f363e;
+    border: none;
+    cursor: pointer;
 }

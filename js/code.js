@@ -32,7 +32,7 @@ function addAnime()
     authorAnime.textContent = author;
     epnumberAnime.textContent = epnumber;
     hebergeurAnime.textContent = hebergeur;
-    btnRemove.innerHTML ='<button type="button" class="btn" onclick="supprimerAnime()">Supprimer</button>';
+    btnRemove.innerHTML ='<button type="button" class="btn" onclick="deleteAnime(this)">Supprimer</button>';
     newLine.append(titleAnime, /* genreAnime, */ authorAnime, epnumberAnime, hebergeurAnime, btnRemove);
     var table = document.querySelector(".table-section tbody");
     if (

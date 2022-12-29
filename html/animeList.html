@@ -5,17 +5,32 @@
         <title>Liste Animes</title>
         <link rel="stylesheet" href="../css/styles.css">
         <script src="../js/code.js"></script>
+        <script src="../js/animation.js"></script>
     </head>
-    <header>
-        <!--TODO: ajouter le logo-->
+    <header class="header-home">
+        <h1>My Anime List</h1>
+        <div class="container">
+        <div class="menu-btn">
+            <div class="menu-btn__burger">
+            </div>
+        </div>
+        </div>
     </header>
-    <body>
-        <!--insérer ici la liste des différents animes suivit avec un formulaire pour ajouter un nouvel anime-->
-        <div class="liste">
-           
+    <body >
+    <div class="menu-container" id="menu">
+        <div class="menu">
+    <ul >
+        <li data-text="Home"><a  href="index.html">Home</a></li>
+        <li data-text="My Anime List"><a  href="html/animeList.html">My Anime List</a></li>
+        <li data-text="Statistiques"><a  href="html/stats.html">Statistiques</a></li>
+        <li data-text="About"><a  href="html/about.html">About</a></li>
+        <li data-text="Contact"><a  href="html/contact.html">Contact</a></li>
+    </ul>
+    </div>
+    </div>
                 <div class="table-section">
                 <table id="animelist">
-                    <h3>Liste des animes</h3>
+
                 <thead>
                     <tr>
                         <th>Titre</th>
@@ -60,11 +75,9 @@
                 </tbody>
             </table>
         </div>
-        </div>
-        <div>
-            <h3>Ajoute ton anime</h3>
-        </div>
-        <div>
+       
+        <div class="form-div">
+             <h3>Ajoute ton anime</h3>
             <form method = "post" name="newAnime" class="form" id="newAnime" onsubmit="return false">
                 <strong>Titre</strong>
                 <input type="text" id="title" name="title" size="25" placeholder = "Nouvel Anime" required>
@@ -97,8 +110,10 @@
             </form>
         </div>
     </body>
-    <footer>
-        <a href="home.html">Retour vers la page d'accueil</a>
-        <a href="about.html">A propos du site</a>
+    <div class="footer-div">
+    <footer class="footer-section">
+        <button><a href="home.html">Retour vers la page d'accueil</a></button>
+        <button><a href="about.html">A propos du site</a></button>
     </footer>
+    </div>
 </html>
