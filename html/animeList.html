@@ -5,9 +5,11 @@
         <title>Liste Animes</title>
         <link rel="stylesheet" href="../css/styles.css">
         <script src="../js/code.js"></script>
-        <script src="../js/animation.js"></script>
+        <script defer src="../js/animation.js"></script>
     </head>
-    <header class="header-home">
+   
+    <body>
+         <header class="header-anime">
         <h1>My Anime List</h1>
         <div class="container">
         <div class="menu-btn">
@@ -16,19 +18,17 @@
         </div>
         </div>
     </header>
-    <body >
     <div class="menu-container" id="menu">
         <div class="menu">
     <ul >
-        <li data-text="Home"><a  href="index.html">Home</a></li>
-        <li data-text="My Anime List"><a  href="html/animeList.html">My Anime List</a></li>
-        <li data-text="Statistiques"><a  href="html/stats.html">Statistiques</a></li>
-        <li data-text="About"><a  href="html/about.html">About</a></li>
-        <li data-text="Contact"><a  href="html/contact.html">Contact</a></li>
+        <li data-text="Home"><a  href="../index.html">Home</a></li>
+        <li data-text="My Anime List"><a  href="./animeList.html">My Anime List</a></li>
+        <li data-text="Statistiques"><a  href="./stats.html">Statistiques</a></li>
+        <li data-text="About"><a  href="./about.html">About</a></li>
     </ul>
     </div>
     </div>
-                <div class="table-section">
+                <div class="table-section hidden" id="table">
                 <table id="animelist">
 
                 <thead>
@@ -76,7 +76,7 @@
             </table>
         </div>
        
-        <div class="form-div">
+        <div class="form-div hidden" id="form-div">
              <h3>Ajoute ton anime</h3>
             <form method = "post" name="newAnime" class="form" id="newAnime" onsubmit="return false">
                 <strong>Titre</strong>
@@ -104,7 +104,6 @@
                 <strong>Où le voir</strong>
                 <input type="text" id="hebergeur" name="hebergeur" size="25" placeholder = "Où le voir" required>
                 <button type="submit" class="btn" onclick="addAnime()">Ajouter</button>
-                <button type="button" class="btn"  onclick="supprimerAnime()">Supprimer</button>
 
 
             </form>

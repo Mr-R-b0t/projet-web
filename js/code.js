@@ -62,5 +62,3 @@ function deleteAnime(err)
     var i = err.parentNode.parentNode.rowIndex;
     document.getElementById("animelist").deleteRow(i);
 }
-
-

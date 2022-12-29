@@ -468,9 +468,6 @@ body {
 }
 
 
-
-
-
 ul {
     position: relative;
     display: flex;
@@ -711,4 +708,21 @@ td img{
     background-color: #2f363e;
     border: none;
     cursor: pointer;
+}
+
+.header-anime{
+        background-color: #24292d;
+        padding: 20px 0;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        top: 0;
+        right: 0px;
+}
+
+
+.hidden-div{
+    display: none;
+    transform: translate(-100%);
 }
