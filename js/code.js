@@ -18,6 +18,7 @@ function addAnime()
     var author = document.getElementById("author").value;
     var epnumber = document.getElementById("epnumber").value;
     var hebergeur = document.getElementById("hebergeur").value;
+    var btn = "Remove"
 
     var newLine = document.createElement("tr");
     var titleAnime = document.createElement("td");
@@ -25,13 +26,15 @@ function addAnime()
     var authorAnime = document.createElement("td");
     var epnumberAnime = document.createElement("td");
     var hebergeurAnime = document.createElement("td");
+    var btnRemove = document.createElement("td");
     titleAnime.textContent = title;
     /* genreAnime.textContent = genre; */
     authorAnime.textContent = author;
     epnumberAnime.textContent = epnumber;
     hebergeurAnime.textContent = hebergeur;
-    newLine.append(titleAnime, /* genreAnime, */ authorAnime, epnumberAnime, hebergeurAnime);
-    var table = document.querySelector(".afficherList tbody");
+    btnRemove.innerHTML ='<button type="button" class="btn" onclick="supprimerAnime()">Supprimer</button>';
+    newLine.append(titleAnime, /* genreAnime, */ authorAnime, epnumberAnime, hebergeurAnime, btnRemove);
+    var table = document.querySelector(".table-section tbody");
     if (
         titleAnime.textContent != "" &&
 /*         genreAnime.textContent != "" &&*/        
@@ -41,9 +44,9 @@ function addAnime()
     ) {
         table.appendChild(newLine);
     }
-    var anime = new Anime(title, author, epnumber, hebergeur);
+    var anime = new Anime(title, genre, author, epnumber, hebergeurAnime);
     console.log(anime);
-    var animeList = JSON.parse(localStorage.getItem("animeList"));
+    var animeList = JSON.parse(localStorage.getItem("../json/animeList.json"));
     if (animeList == null)
     {
         animeList = [];
@@ -54,23 +57,10 @@ function addAnime()
 
 }
 
-
-
-function getAnimeByAPI()
+function deleteAnime(err)
 {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.jikan.moe/v3/search/anime?q=one%20piece");
-    xhr.send();
-    xhr.onreadystatechange = function()
-    {
-        if (xhr.readyState == 4 && xhr.status == 200)
-        {
-            var anime = JSON.parse(xhr.responseText);
-            console.log(anime);
-            var anime = new Anime(anime.title, anime.genre, anime.author, anime.epnumber, anime.hebergeur);
-            console.log(anime);
-        }
-    }
+    var i = err.parentNode.parentNode.rowIndex;
+    document.getElementById("animelist").deleteRow(i);
 }
 
 

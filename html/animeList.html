@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Liste Animes</title>
-        <link rel="stylesheet" href="../css/.css">
+        <link rel="stylesheet" href="../css/styles.css">
         <script src="../js/code.js"></script>
     </head>
     <header>
@@ -12,26 +12,60 @@
     <body>
         <!--insérer ici la liste des différents animes suivit avec un formulaire pour ajouter un nouvel anime-->
         <div class="liste">
-            <table class="afficherList">
+           
+                <div class="table-section">
+                <table id="animelist">
+                    <h3>Liste des animes</h3>
                 <thead>
                     <tr>
                         <th>Titre</th>
                     <!--<th>Genre</th> -->
                         <th>Auteur</th>
                         <th>Nombre d'épisode</th>
-                        <th>Où le voir</th>
+                        <th>Platforme</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>One Piece</td>
+                        <td>Eiichiro Oda</td>
+                        <td>1000</td>
+                        <td>Netflix</td>
+                        <td><button type="button" class="btn" onclick="deleteAnime(this)">Supprimer</button></td>
+                    </tr>
+                    <tr>
+                        <td>Dragon Ball</td>
+                        <td>Akira Toriyama</td>
+                        <td>500</td>
+                        <td>Netflix</td>
+                        <td><button type="button" class="btn" onclick="deleteAnime(this)">Supprimer</button></td>
+                    </tr>
+                    <tr>
+                        <td>Death Note</td>
+                        <td>Takeshi Obata</td>
+                        <td>37</td>
+                        <td>Netflix</td>
+                        <td><button type="button" class="btn" onclick="deleteAnime(this)">Supprimer</button></td>
+                    </tr>
+                    <tr>
+                        <td>Fullmetal Alchemist</td>
+                        <td>Hiroshi Arakawa</td>
+                        <td>64</td>
+                        <td>Netflix</td>
+                        <td><button type="button" class="btn" onclick="deleteAnime(this)">Supprimer</button></td>
+                    </tr>
+                    <tr>
 
                 </tbody>
             </table>
+        </div>
         </div>
         <div>
             <h3>Ajoute ton anime</h3>
         </div>
         <div>
-            <form method = "post" name="newAnime" class="box" id="newAnime" onsubmit="return false">
+            <form method = "post" name="newAnime" class="form" id="newAnime" onsubmit="return false">
                 <strong>Titre</strong>
                 <input type="text" id="title" name="title" size="25" placeholder = "Nouvel Anime" required>
                 <strong>Genre : </strong>
