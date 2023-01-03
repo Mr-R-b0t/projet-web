@@ -14,7 +14,7 @@ class Anime
 function addAnime()
 {
     var title = document.getElementById("title").value;
-/*  var genre = document.getElementById("genre").options[document.getElementById("genre").selectedIndex].value;*/ 
+    var genre = document.getElementById("genre").value; 
     var author = document.getElementById("author").value;
     var epnumber = document.getElementById("epnumber").value;
     var hebergeur = document.getElementById("hebergeur").value;
@@ -22,22 +22,22 @@ function addAnime()
 
     var newLine = document.createElement("tr");
     var titleAnime = document.createElement("td");
-    /* var genreAnime = document.createElement("td"); */
+    var genreAnime = document.createElement("td");
     var authorAnime = document.createElement("td");
     var epnumberAnime = document.createElement("td");
     var hebergeurAnime = document.createElement("td");
     var btnRemove = document.createElement("td");
     titleAnime.textContent = title;
-    /* genreAnime.textContent = genre; */
+    genreAnime.textContent = genre;
     authorAnime.textContent = author;
     epnumberAnime.textContent = epnumber;
     hebergeurAnime.textContent = hebergeur;
     btnRemove.innerHTML ='<button type="button" class="btn" onclick="deleteAnime(this)">Supprimer</button>';
-    newLine.append(titleAnime, /* genreAnime, */ authorAnime, epnumberAnime, hebergeurAnime, btnRemove);
+    newLine.append(titleAnime, genreAnime, authorAnime, epnumberAnime, hebergeurAnime, btnRemove);
     var table = document.querySelector(".table-section tbody");
     if (
         titleAnime.textContent != "" &&
-/*         genreAnime.textContent != "" &&*/        
+        genreAnime.textContent != "" && 
         authorAnime.textContent != "" &&
         epnumberAnime.textContent != "" &&
         hebergeurAnime.textContent != ""
