@@ -62,3 +62,10 @@ function deleteAnime(err)
     var i = err.parentNode.parentNode.rowIndex;
     document.getElementById("animelist").deleteRow(i);
 }
+
+//statistiques
+var statsAnime = 4;
+var statsEpisode = 100;
+var statsGenre = 5;
+var statsAuteur = 3;
+var statsPlateforme = 2;

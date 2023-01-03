@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Statistiques</title>
         <link rel= "stylesheet" href= "..\css\styles.css">
+        <script src="../js/code.js"></script>
         <script defer src="../js/animation.js"></script>
     </head>
 
@@ -11,24 +12,53 @@
     <header class="header-anime">
         <h1>My Anime List</h1>
         <div class="container">
-        <div class="menu-btn">
-            <div class="menu-btn__burger">
+            <div class="menu-btn">
+                <div class="menu-btn__burger">
+                </div>
             </div>
-        </div>
         </div>
         <div id="progressbar"></div>
         <div id="scrollpath"></div>
     </header>
-        <div class="menu-container" id="menu">
+    <div class="menu-container" id="menu">
         <div class="menu">
-    <ul>
-        <li data-text="Home"><a  href="../index.html">Home</a></li>
-        <li data-text="My Anime List"><a  href="./animeList.html">My Anime List</a></li>
-        <li data-text="Statistiques"><a  href="./stats.html">Statistiques</a></li>
-        <li data-text="About"><a  href="./about.html">About</a></li>
-        <li data-text="How to use"><a href="./how.html">How to use</a></li>
-    </ul>
+            <ul>
+                <li data-text="Home"><a  href="../index.html">Home</a></li>
+                <li data-text="My Anime List"><a  href="./animeList.html">My Anime List</a></li>
+                <li data-text="Statistiques"><a  href="./stats.html">Statistiques</a></li>
+                <li data-text="About"><a  href="./about.html">About</a></li>
+                <li data-text="How to use"><a href="./how.html">How to use</a></li>
+            </ul>
+        </div>
     </div>
+    <div>
+        <div>
+            <div class="stats-section">
+                <h2>Statistiques du site</h2>
+                <div class="stats">
+                    <div class="stats__item">
+                        <h3>Nombre d'animes recensés</h3>
+                        <p id="nbAnime"><script>document.write(statsAnime)</script></p>
+                    </div>
+                    <div class="stats__item">
+                        <h3>Nombre d'épisodes comptabilisés</h3>
+                        <p id="nbEpisodes"><script>document.write(statsEpisode)</script></p>
+                    </div>
+                    <div class="stats__item">
+                        <h3>Nombre de genres disponibles</h3>
+                        <p id="nbGenres"><script>document.write(statsGenre)</script></p>
+                    </div>
+                    <div class="stats__item">
+                        <h3>Nombre d'auteurs recensés</h3>
+                        <p id="nbAuteurs"><script>document.write(statsAuteur)</script></p>
+                    </div>
+                    <div class="stats__item">
+                        <h3>Nombre de plateformes recensés</h3>
+                        <p id="nbPlateformes"><script>document.write(statsPlateforme)</script></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     </body>
