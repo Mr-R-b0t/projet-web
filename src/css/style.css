@@ -55,7 +55,6 @@ canvas {
 h1 {
   position: relative;
   font-size: 150px;
-  pointer-events: all;
   -webkit-text-stroke: 0.3vw #f10404;
   background: transparent;
   color: transparent;
