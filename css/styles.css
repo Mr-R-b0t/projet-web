@@ -398,6 +398,7 @@ body {
     right:5px;
     top: 5px;  
     background-color: #2f363e;
+    z-index: 999;
 }
 
 .menu-btn__burger{

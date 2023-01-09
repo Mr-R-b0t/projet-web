@@ -42,7 +42,6 @@ const fetchAnime = async (search) => {
         </div>`;
 }       console.log(imagebefore)
         animeList.appendChild(animeElement);
-       //remove image before
         if(imagebefore != null){
             imagebefore.remove();
         } 

@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/search.css">
-    
-    <title>Document</title>
+    <script defer src="../js/animation.js"></script>
+   
+     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animation.css">
+   
+    <title>Détente</title>
 </head>
-<body> 
-     <div class="menu-btn">
+<body>
+    <div class="menu-btn">
             <div class="menu-btn__burger">
             </div>
         </div>
@@ -29,22 +31,14 @@
     </ul>
     </div>
     </div>
-    
-    <div class="wrapper">
-        <div class="search-input">
-        <input oninput="searchAnime(this.value)" type="text" id="search"  name="search" placeholder="Rechercher un anime">
-            <div class="autocom-box">
-            <ul id="list">
-            
-            </ul>
-            </div>
-        </div>
-    </div>
-    
-    <script src="../js/search.js"></script>
-    
-    <div id="images" class="images">
-    </div>
-
+    <canvas id="c"></canvas>
+    <script src="https://r105.threejsfundamentals.org/threejs/resources/threejs/r105/three.min.js"></script>
+    <script src="https://r105.threejsfundamentals.org/threejs/resources/threejs/r105/js/controls/OrbitControls.js"></script>
+    <script src="https://r105.threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/GLTFLoader.js"></script>
+    <script src="https://r105.threejsfundamentals.org/threejs/../3rdparty/dat.gui.min.js"></script>
+     <script src="../js/three.js"></script>
 </body>
+
 </html>
+
+

@@ -55,7 +55,7 @@ function onMouseMove(event) {
 }
 
 function onMouseWheel(event) {
-  camera.position.z += event.deltaY * 0.1; // move camera along z-axis
+  camera.position.z += event.deltaY * 0.1; 
 }
 
 function onResize(event) {
