@@ -1,0 +1,100 @@
+html, body {
+  margin: 0%;
+  box-sizing: border-box;
+  padding: 0%;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+  top : 0;
+  left : 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+
+.title-container{
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  color:white;
+  pointer-events: all;
+}
+
+
+span {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+  pointer-events: all;
+}
+
+span a {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+}
+
+span a:before,
+span a:after {
+  position: absolute;
+  content: "CONTINUE";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid rgb(255, 0, 0);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+span a:before {
+  color: rgb(255, 255, 255);
+  background: rgb(255, 0, 0);
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+span a:after {
+  color: rgb(0, 255, 183);
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+span a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+h1:hover{
+  color: rgb(0, 255, 183);
+  font-size: 60px;
+  transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s;
+}
