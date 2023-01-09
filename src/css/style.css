@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&subset=greek');
 html, body {
+  font-family: Roboto, monospace;
   margin: 0%;
   box-sizing: border-box;
   padding: 0%;
   width: 100%;
   overflow: hidden;
+  background: transparent;
+  display:flex; 
+ 
+  align-items: center;
+  
 }
 
 
@@ -31,20 +38,53 @@ canvas {
 
 
 .title-container{
-  width: 30%;
+  padding:0;
+  display:flex; 
+  margin:0;
+  width: 100%;
   height: 100%;
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 30px;
 }
 
 h1 {
-  font-size: 50px;
-  color:white;
+  position: relative;
+  font-size: 150px;
   pointer-events: all;
+  -webkit-text-stroke: 0.3vw #f10404;
+  background: transparent;
+  color: transparent;
+  text-transform: uppercase;
 }
 
+h1::before{
+  content: attr(data-text);
+  position: absolute;
+  top:0;
+  left:0%; 
+  width: 0;
+  height: 100%;
+  color: #000000;
+  -webkit-text-stroke: 0vw #383d52;
+  border-right: 2px solid #e7e7e7;
+  overflow: hidden;
+  animation: animate 5s linear infinite;
+}
+
+
+@keyframes animate {
+  0%, 10%, 100%{
+    width: 0;
+  }
+  70%, 90%{
+    width: 100%;
+  }
+}
 
 span {
   position: relative;
@@ -93,8 +133,3 @@ span a:hover {
   transform: translateZ(-25px) rotateX(-90deg);
 }
 
-h1:hover{
-  color: rgb(0, 255, 183);
-  font-size: 60px;
-  transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s;
-}
